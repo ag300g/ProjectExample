@@ -1,0 +1,34 @@
+# Data
+target_file: data/self_gmv_yl_by_cate_features.txt
+target_column: gmv
+
+time_features_dir: 'data/features_tm/monthly'
+category_features_dir: 'data/features_cg/monthly'
+
+output_dir: output
+
+# Join
+keys_group: ['item_third_cate_cd']
+keys_time: ['tm_key']
+
+
+# Feature columns, default to all
+
+# Method: select one of [linear_regression, ridge, xgb]
+method: linear_regression
+
+
+# Forecast Batch
+keys_batch: ['item_third_cate_cd']
+
+# columns use to split training set and test set
+split_name: tm_key
+train_max: '2017-03'
+test_values: ['2017-04']
+
+
+# Preprocess
+
+
+# Postprocess
+

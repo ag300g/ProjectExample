@@ -1,0 +1,15 @@
+target_file: weekly_sales.txt
+target_column: gmv
+
+time_features_dir: features_tm
+category_features_dir: features_cg
+
+output_dir: output
+
+keys_group: ['item_third_cate_cd']
+keys_time: sequentialweek
+
+# columns use to split training set and test set
+split_name: sequentialweek
+split_value: [91, 96, 100, 104, 109, 113]
+predict_span: 4
